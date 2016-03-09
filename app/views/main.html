@@ -1,0 +1,45 @@
+<div class="row">
+
+    <div class="col-xs-10 col-xs-offset-1">
+
+        <div class="info">
+            <h1>Nice to meet you</h1>
+
+            <div class="description">
+                <h2>Twenty random pictures will soon represent you.</h2>
+                <h2>You've got twenty seconds per picture to tell how it is now a part of your story.</h2>
+            </div>
+
+            <button class="btn" id="startPecha" type="button" ng-click="startPecha()" data-toggle="modal" data-target="#myModal">So, who are you?</button>
+        </div>
+
+        <!--
+        <div ng-show="piilo">
+            <img ng-src="{{photourl}}">
+            <p>Photos remaining: {{remaining}}</p>
+        </div>
+-->
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div ng-hide="piilo">
+                            <p>Photos remaining: {{remaining}}</p>
+                            <img ng-src="{{photourl}}">
+                        </div>
+                        <div ng-show="piilo">
+                            <button class="btn" type="button" ng-click="startPecha()">Again?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+            <h3>It's just like Pecha Kucha, only with a little twist.</h3>
+        </div>
+
+    </div>
+
+</div>
